@@ -1,4 +1,4 @@
-<input type="text" name="" id="" placeholder="Buscar productos, marcas y má...">
+<input type="text" [(ngModel)]="txtBuscar" placeholder="Buscar productos, marcas y má...">
 <button type="button" (click)="buscar()">Buscar</button>
 <ul>
   <li *ngFor="let item of resultsBusqueda">
