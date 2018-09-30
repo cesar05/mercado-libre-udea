@@ -1,0 +1,9 @@
+<input type="text" name="" id="" placeholder="Buscar productos, marcas y má...">
+<button type="button" (click)="buscar()">Buscar</button>
+<ul>
+  <li *ngFor="let item of resultsBusqueda">
+    <img [src]=item.thumbnail /><br/>
+    {{item.title}}<br/>
+    ${{item.price}}    
+  </li>
+</ul>
