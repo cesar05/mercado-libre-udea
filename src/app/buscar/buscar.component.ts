@@ -8,9 +8,11 @@ import { BuscarService } from '../buscar.service';
 })
 export class BuscarComponent implements OnInit {
 
-  constructor(private srvBuscar: BuscarService) { }
+  constructor(private srvBuscar: BuscarService) { 
+    
+  }
 
-  resultsBusqueda:Object=[];
+  resultsBusqueda:Array<Object>=[];
   txtBuscar:string="";
   clicBtnBuscar:boolean=false;
 
