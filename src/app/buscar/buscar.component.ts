@@ -12,11 +12,13 @@ export class BuscarComponent implements OnInit {
 
   resultsBusqueda:Object=[];
   txtBuscar:string="";
+  clicBtnBuscar:boolean=false;
 
   ngOnInit() {
   }
 
   buscar():void{
+    this.clicBtnBuscar=true;
     this.srvBuscar.buscar(this.txtBuscar).subscribe(res=>{
       console.log(res);
       this.resultsBusqueda=res.results;

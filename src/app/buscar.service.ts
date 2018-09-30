@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BuscarService {
 
-  urlBuscar:string='https://api.mercadolibre.com/sites/MCO/search?q=iphone/sites/MCO/search?q='; 
+  urlBuscar:string='https://api.mercadolibre.com/sites/MCO/search?q='; 
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -16,6 +16,6 @@ export class BuscarService {
   constructor(private http: HttpClient) { }
 
   buscar(txtBuscar):Observable<any>{
-    return this.http.get(this.urlBuscar+""+txtBuscar,this.httpOptions);
+    return this.http.get(this.urlBuscar+txtBuscar,this.httpOptions);
   }
 }

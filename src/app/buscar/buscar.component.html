@@ -1,5 +1,6 @@
 <input type="text" [(ngModel)]="txtBuscar" placeholder="Buscar productos, marcas y má...">
 <button type="button" (click)="buscar()">Buscar</button>
+<p *ngIf="resultsBusqueda.length<=0 && clicBtnBuscar">No se encontraron resultados</p>
 <ul>
   <li *ngFor="let item of resultsBusqueda">
     <img [src]=item.thumbnail /><br/>
