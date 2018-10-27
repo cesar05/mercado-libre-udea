@@ -6,10 +6,10 @@
 </div>
 <div class="row">
   <div class="col-md-8">
-    <p *ngIf="resultsBusqueda.length<=0 && clicBtnBuscar">No se encontraron resultados</p>
+    <p *ngIf="resultsBusqueda.length<=0 && clicBtnBuscar">Buscando...</p>
     <ul>
       <li *ngFor="let item of resultsBusqueda">
-        <a (click)="consultarDetalleProducto(item.id)"><img [src]=item.thumbnail /></a><br />
+        <a (click)="consultarDetalleProducto(item.id)" style="cursor: pointer" title="Ver detalle"><img [src]=item.thumbnail /></a><br />
         {{item.title}}<br />
         ${{item.price}}
       </li>
